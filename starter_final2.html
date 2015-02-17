@@ -1,0 +1,61 @@
+<html>
+	<head>
+	 	 <title> Starter </title>	
+	 	 
+	 	 
+	 	 
+	 	 <script type="text/javascript" src="debug.js"> </script>
+	 	 
+	 	 <script type="text/javascript">
+	 
+	 
+	    var konsole;
+	 
+	    function init() {
+
+	    	konsole = new DebugKonsole();	
+	    	
+	    }
+	 
+	    function myfunction() {
+	    	
+	    	
+	    	konsole.debug("myfunction");
+	    	
+	    	alert("Hallo Welt");
+	    	var message = prompt("Bitte gib deinen Namen ein");
+	    	
+	    	if(message != null)
+	    			konsole.debug(message);
+	    	
+	    	
+	    	var ende = confirm("Willst du die Session beenden?");
+	    	
+	    	if (ende)
+	    		konsole.debug("Auf Wiedersehen " + message);
+	    		
+	    		
+	    		
+	    	document.getElementById("status").innerHTML = "Halli Hallo";	
+	    		
+	    		
+	    // string, number, boolean, object, function, undefined
+	    		
+
+	    	}
+	 
+	 	 </script>
+	 	 
+	</head>
+
+	<body onload="init()">
+
+
+			<input type="button" id="meinButton" value="Mein erster Button" onclick="myfunction()" />		</br>	</br>	</br>	
+		
+		
+			<div id="status"></div>							
+		
+	</body>
+	
+</html>
